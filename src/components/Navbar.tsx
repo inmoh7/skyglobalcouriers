@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose } from 'react-icons/io5';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,24 +17,24 @@ const Navbar = () => {
       <div className="mx-auto px-4">
         <div className="flex justify-between items-center p-3 gap-5">
           <div className="flex-shrink-0">
-            <a href="/" className="text-xl font-bold">
+            <Link href="/" className="text-xl font-bold">
               Logo
-            </a>
+            </Link>
           </div>
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            <a href="/" className="text-white hover:text-blue-600">
+            <Link href="/" className="text-white hover:text-blue-600">
               Home
-            </a>
-            <a href="/about" className="text-white hover:text-blue-600">
+            </Link>
+            <Link href="/about" className="text-white hover:text-blue-600">
               About
-            </a>
-            <a href="/services" className="text-white hover:text-blue-600">
+            </Link>
+            <Link href="/services" className="text-white hover:text-blue-600">
               Services
-            </a>
-            <a href="/contact" className="text-white hover:text-blue-600">
+            </Link>
+            <Link href="/contact" className="text-white hover:text-blue-600">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -72,24 +73,27 @@ const Navbar = () => {
             >
               <IoClose size={24} />
             </button>
-            <a href="/" className="text-white hover:text-blue-500 text-lg">
+            <Link href="/" className="text-white hover:text-blue-500 text-lg">
               Home
-            </a>
-            <a href="/about" className="text-white hover:text-blue-500 text-lg">
+            </Link>
+            <Link
+              href="/about"
+              className="text-white hover:text-blue-500 text-lg"
+            >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/services"
               className="text-white hover:text-blue-500 text-lg"
             >
               Services
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="text-white hover:text-blue-500 text-lg"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </div>
